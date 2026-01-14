@@ -19,11 +19,12 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
 
 ## 🛠 Tech Stack
 
-- **Backend**: Java 17, Spring Boot 3
-- **Database**: MySQL 8.0 (Persistent Storage)
-- **Cache**: Redis 7.0 (High-speed caching)
-- **DevOps**: Docker & Docker Compose
-- **Tools**: Lombok, Spring Data JPA, OpenAPI (Swagger)
+- **Backend**: Java 17, Spring Boot 3 (RESTful API)
+- **Database**: MySQL 8.0 (Docker volume persistence)
+- **Cache**: Redis 7.0 (URL mapping cache)
+- **DevOps**: Docker, Docker Compose (multi-container orchestration)
+- **Persistence**: Spring Data JPA (MySQL)
+- **API Docs**: OpenAPI 3 (Swagger UI)
 
 ## 🚀 How to Run
 
@@ -43,12 +44,21 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
    #or
    docker compose up -d --build
 3. **Access the Application**
-   - **Service API**:http://localhost:8080
-   - **Swagger UI (API Docs)**: http://localhost:8080/swagger-ui.html
+   - **Service Base URL**: http://localhost:8080
+   - **Swagger UI (API Documentation)**: http://localhost:8080/swagger-ui.html
 
 ## 🧪 API Usage Example
+
    ```bash
    curl -X POST http://localhost:8080/api/shorten \
-        -H "Content-Type: application/json" \
-        -d '{"originalUrl": "https://www.google.com"}'
+     -H "Content-Type: application/json" \
+     -d '{"originalUrl": "https://www.google.com"}'
+   ```
+   Response example:
+   ```json
+   {
+  "shortUrl": "http://localhost:8080/abc123"
+   }
+   ```
+
    
