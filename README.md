@@ -1,6 +1,10 @@
 # 🚀 High-Performance Distributed URL Shortener
 
-![Java](https://img.shields.io/badge/Java-17-orange) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.0-green) ![Redis](https://img.shields.io/badge/Redis-Cache-red) ![MySQL](https://img.shields.io/badge/MySQL-DB-blue) ![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.0-green)
+![Redis](https://img.shields.io/badge/Redis-Cache-red)
+![MySQL](https://img.shields.io/badge/MySQL-DB-blue)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
 
 A scalable, industrial-level URL shortening service (similar to TinyURL) designed to handle high concurrency. Built with a focus on distributed system principles, preventing cache stampede, and ensuring data consistency.
 
@@ -28,7 +32,19 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
 
 ### Quick Start
 
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/tiny-url.git](https://github.com/jjs7233/tiny-url.git)
+   git clone [https://github.com/jjs7233/tiny-url.git](https://github.com/jjs7233/tiny-url.git)
+   cd tiny-url
+2. **Start the application Run the following command to build and start all services (App, MySQL, Redis):**
+   ```bash
+   docker-compose up -d --build
+3. **Access the Application**
+   - ** Service API:http://localhost:8080
+   - ** Swagger UI (API Docs): http://localhost:8080/swagger-ui.html
+
+## 🧪 API Usage Example
+curl -X POST http://localhost:8080/api/shorten \
+     -H "Content-Type: application/json" \
+     -d '{"originalUrl": "[https://www.google.com](https://www.google.com)"}'
    
