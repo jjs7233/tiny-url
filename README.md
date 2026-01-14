@@ -57,7 +57,7 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
    Response example:
    ```json
    {
-  "shortUrl": "http://localhost:8080/abc123"
+  "shortUrl": "http://localhost:8080/jWaBPznd1S"
    }
    ```
 
