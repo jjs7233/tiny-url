@@ -40,8 +40,8 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
    ```bash
    docker-compose up -d --build
 3. **Access the Application**
-   - ** Service API:http://localhost:8080
-   - ** Swagger UI (API Docs): http://localhost:8080/swagger-ui.html
+   - **Service API**:http://localhost:8080
+   - **Swagger UI (API Docs)**: http://localhost:8080/swagger-ui.html
 
 ## 🧪 API Usage Example
 curl -X POST http://localhost:8080/api/shorten \
