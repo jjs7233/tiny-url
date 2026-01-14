@@ -36,7 +36,7 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
    ```bash
    git clone [https://github.com/jjs7233/tiny-url.git](https://github.com/jjs7233/tiny-url.git)
    cd tiny-url
-2. **Start the application Run the following command to build and start all services (App, MySQL, Redis):**
+2. **Start the application** Run the following command to build and start all services (App, MySQL, Redis):
    ```bash
    docker-compose up -d --build
 3. **Access the Application**
@@ -44,7 +44,8 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
    - **Swagger UI (API Docs)**: http://localhost:8080/swagger-ui.html
 
 ## 🧪 API Usage Example
-curl -X POST http://localhost:8080/api/shorten \
-     -H "Content-Type: application/json" \
-     -d '{"originalUrl": "[https://www.google.com](https://www.google.com)"}'
+   ```bash
+   curl -X POST http://localhost:8080/api/shorten \
+        -H "Content-Type: application/json" \
+        -d '{"originalUrl": "[https://www.google.com](https://www.google.com)"}'
    
