@@ -27,18 +27,8 @@ A scalable, industrial-level URL shortening service (similar to TinyURL) designe
 - Docker & Docker Compose installed
 
 ### Quick Start
+
 1. Clone the repository:
-    ```bash
-2.Start services using Docker Compose:
-  cd tiny-url
-  docker-compose up -d
-3.Access the application:
-  Swagger UI (Test API): http://localhost:8080/swagger-ui/index.html
-  API Endpoint: http://localhost:8080/shorten
-
-##📐 Architecture Flow
-- **Write Request** (POST): Client -> Controller -> Snowflake ID -> Base62 Encode -> Save to MySQL -> Update Redis.
-- **Read Request** (GET): Client -> Controller -> Check Redis (Hit? Return) -> Check MySQL -> Update Redis -> 302 Redirect.
-
-Created by [Jiantong Song]
-   git clone [https://github.com/YOUR_USERNAME/tiny-url.git](https://github.com/YOUR_USERNAME/tiny-url.git)
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/tiny-url.git](https://github.com/jjs7233/tiny-url.git)
+   
